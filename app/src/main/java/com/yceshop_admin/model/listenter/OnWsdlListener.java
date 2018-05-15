@@ -1,22 +1,20 @@
 package com.yceshop_admin.model.listenter;
 
-import com.yceshop_admin.bean.LoginBean;
-
 /**
  * 登录监听
- * OnLoginListener
+ * OnWsdlListener
  *
  * @author tianshi
  * @time 2018/5/14
  */
 
-public interface OnLoginListener {
+public interface OnWsdlListener<T> {
     /**
      * 成功
      *
      * @param loginBean 返回结果
      */
-    void onSuccess(LoginBean loginBean);
+    void onSuccess(T loginBean);
 
     /**
      * 失败

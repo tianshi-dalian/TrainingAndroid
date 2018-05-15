@@ -30,6 +30,22 @@ public class LoginActivity extends CommonActivity implements ILoginView {
     }
 
     /**
+     * 初始化view
+     */
+    @Override
+    public void initView() {
+
+    }
+
+    /**
+     * 初始化数据
+     */
+    @Override
+    public void initData() {
+
+    }
+
+    /**
      * 点击事件集合
      *
      * @param view

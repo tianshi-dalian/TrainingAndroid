@@ -2,7 +2,7 @@ package com.yceshop_admin.presenter;
 
 import com.yceshop_admin.bean.LoginBean;
 import com.yceshop_admin.model.LoginModel;
-import com.yceshop_admin.model.listenter.OnLoginListener;
+import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.presenter.impl.ILoginPresenter;
 import com.yceshop_admin.view.ILoginView;
 
@@ -37,7 +37,7 @@ public class LoginPresenter implements ILoginPresenter {
         }
         //调用登录接口
         LoginModel loginModel = new LoginModel();
-        loginModel.login(iLoginView.getUserName(), iLoginView.getPassword(), new OnLoginListener() {
+        loginModel.login(iLoginView.getUserName(), iLoginView.getPassword(), new OnWsdlListener<LoginBean>() {
             @Override
             public void onSuccess(LoginBean loginBean) {
                 iLoginView.showToastShort("用户名：" + loginBean.getData().getNickName());

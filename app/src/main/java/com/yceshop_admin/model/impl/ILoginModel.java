@@ -1,6 +1,6 @@
 package com.yceshop_admin.model.impl;
 
-import com.yceshop_admin.model.listenter.OnLoginListener;
+import com.yceshop_admin.model.listenter.OnWsdlListener;
 
 /**
  * 登录Model
@@ -16,7 +16,7 @@ public interface ILoginModel {
      *
      * @param userName        账号
      * @param passWord        密码
-     * @param onLoginListener 结果监听
+     * @param onWsdlListener 结果监听
      */
-    void login(String userName, String passWord, OnLoginListener onLoginListener);
+    void login(String userName, String passWord, OnWsdlListener onWsdlListener);
 }

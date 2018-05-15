@@ -14,11 +14,12 @@ import com.yceshop_admin.utils.ToastUtil;
  * @time 2018/5/15
  */
 
-public class CommonActivity extends FragmentActivity implements ICommonView {
+public abstract class  CommonActivity extends FragmentActivity implements ICommonView {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initView();
     }
 
     /**
@@ -30,4 +31,13 @@ public class CommonActivity extends FragmentActivity implements ICommonView {
     public void showToastShort(String content) {
         ToastUtil.shortToast(this, content);
     }
+
+    /**
+     * 初始化view
+     */
+    public abstract void initView();
+    /**
+     * 初始化数据
+     */
+    public abstract void initData();
 }

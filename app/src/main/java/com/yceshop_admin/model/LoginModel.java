@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import com.yceshop_admin.bean.LoginBean;
 import com.yceshop_admin.common.Constant;
 import com.yceshop_admin.model.impl.ILoginModel;
-import com.yceshop_admin.model.listenter.OnLoginListener;
+import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.wsdl.LoginWsdl;
 
 import retrofit2.Call;
@@ -30,10 +30,10 @@ public class LoginModel implements ILoginModel {
      *
      * @param userName        账号
      * @param passWord        密码
-     * @param onLoginListener 结果监听
+     * @param onWsdlListener 结果监听
      */
     @Override
-    public void login(String userName, String passWord, OnLoginListener onLoginListener) {
+    public void login(String userName, String passWord, OnWsdlListener onWsdlListener) {
         LoginBean loginBean = new LoginBean();
         loginBean.setUcode(userName);
         loginBean.setUserPw(passWord);
@@ -47,19 +47,19 @@ public class LoginModel implements ILoginModel {
                 if (response.isSuccessful()) {
                     LoginBean result = response.body();
                     if (result.getCode() == Constant.INT_1000) {
-                        onLoginListener.onSuccess(result);
+                        onWsdlListener.onSuccess(result);
                     } else {
-                        onLoginListener.onError(result.getMessage());
+                        onWsdlListener.onError(result.getMessage());
                     }
 
                 } else {
-                    onLoginListener.onError(Constant.ERROR_MSG);
+                    onWsdlListener.onError(Constant.ERROR_MSG);
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<LoginBean> call, Throwable t) {
-                onLoginListener.onError(Constant.ERROR_MSG);
+                onWsdlListener.onError(Constant.ERROR_MSG);
             }
         });
     }
