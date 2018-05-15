@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">yceshop_admin</string>
+    <!--<string name="wsdl_error">网络加载失败，请确认连接网络</string>-->
+</resources>
