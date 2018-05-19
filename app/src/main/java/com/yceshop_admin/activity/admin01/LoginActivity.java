@@ -52,14 +52,13 @@ public class LoginActivity extends CommonActivity implements ILoginView {
     TextView tvReg;
     @BindView(R.id.tv_Internet01)
     TextView tvInternet01;
-    @BindView(R.id.ll_titleReturn)
-    LinearLayout llTitleReturn;
-    @BindView(R.id.title_tv)
-    TextView titleTv;
-    @BindView(R.id.title_rl_01)
+
     RelativeLayout titleRl01;
     @BindView(R.id.rootLayout)
     RelativeLayout rootLayout;
+
+    @BindView(R.id.title_tv)
+    TextView titleTv;
 
 
     @Override
@@ -67,6 +66,7 @@ public class LoginActivity extends CommonActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        titleTv.setText("会员登录");
 
     }
 
@@ -106,7 +106,7 @@ public class LoginActivity extends CommonActivity implements ILoginView {
                 startActivity(intent);
                 break;
             case R.id.tv_jing_login:
-                intent = new Intent(this, AddActivity.class);
+                intent = new Intent(this, AddGoodsActivity.class);
                 startActivity(intent);
                 break;
 

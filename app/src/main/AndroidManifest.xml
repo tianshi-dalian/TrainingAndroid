@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".activity.admin01.MainActivity" />
         <activity android:name=".activity.admin01.RegisterActivity" />
-        <activity android:name=".activity.admin01.AddActivity"></activity>
+        <activity android:name=".activity.admin01.AddGoodsActivity"></activity>
     </application>
 
 </manifest>

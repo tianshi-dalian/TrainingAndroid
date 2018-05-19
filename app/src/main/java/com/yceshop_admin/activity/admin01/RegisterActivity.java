@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yceshop_admin.R;
@@ -24,7 +25,7 @@ import butterknife.OnClick;
  * @author gehang
  * @time 2018/5/18/018
  */
-public class RegisterActivity extends CommonActivity implements IRegisterView{
+public class RegisterActivity extends CommonActivity implements IRegisterView {
 
     @BindView(R.id.et_phone)
     EditText etPhone;
@@ -50,12 +51,19 @@ public class RegisterActivity extends CommonActivity implements IRegisterView{
     Button btReg;
     @BindView(R.id.rootLayout)
     LinearLayout rootLayout;
+    @BindView(R.id.back)
+    LinearLayout back;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.title_reg)
+    RelativeLayout titleReg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
+        title.setText("会员注册");
     }
 
     @Override
@@ -67,10 +75,10 @@ public class RegisterActivity extends CommonActivity implements IRegisterView{
     public void initData() {
 
     }
-/**
- * 页面的点击事件汇总
- *
- * */
+
+    /**
+     * 页面的点击事件汇总
+     */
     @OnClick({R.id.iv_delete01, R.id.iv_delete02, R.id.tv_identifycode, R.id.iv_delete03, R.id.iv_delete04, R.id.bt_reg})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -79,30 +87,30 @@ public class RegisterActivity extends CommonActivity implements IRegisterView{
              * */
             case R.id.iv_delete01:
                 break;
-                /**
-                 * 验证码的删除按钮点击事件
-                 * */
+            /**
+             * 验证码的删除按钮点击事件
+             * */
             case R.id.iv_delete02:
                 break;
-                /**
-                 * 获取验证码按钮点击事件
-                 * */
+            /**
+             * 获取验证码按钮点击事件
+             * */
             case R.id.tv_identifycode:
 
                 break;
-                /**
-                 * 密码的删除按钮点击事件
-                 * */
+            /**
+             * 密码的删除按钮点击事件
+             * */
             case R.id.iv_delete03:
                 break;
-                /**
-                 *
-                 * 推荐码的删除按钮点击事件*/
+            /**
+             *
+             * 推荐码的删除按钮点击事件*/
             case R.id.iv_delete04:
                 break;
-                /**
-                 * 同意并继续的按钮点击事件
-                 * */
+            /**
+             * 同意并继续的按钮点击事件
+             * */
             case R.id.bt_reg:
 
                 RegisterPresenter registerPresenter = new RegisterPresenter(this);
