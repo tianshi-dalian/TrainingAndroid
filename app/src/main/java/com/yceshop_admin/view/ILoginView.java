@@ -1,5 +1,6 @@
 package com.yceshop_admin.view;
 
+import com.yceshop_admin.bean.LoginBean;
 import com.yceshop_admin.common.ICommonView;
 
 /**
@@ -24,4 +25,14 @@ public interface ILoginView extends ICommonView {
      * @return 密码
      */
     String getPassword();
+
+    /**
+     * 会员登录 接口回调
+     *
+     * @param loginBean
+     */
+    void login(LoginBean loginBean);
+
+
+
 }

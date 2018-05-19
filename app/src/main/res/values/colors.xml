@@ -3,4 +3,60 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="sc_transparent_background">#00111111</color>
+    <color name="text_color01">#888888</color>
+    <color name="text_color03">#FF8C1E</color>
+    <color name="text_color04">#646464</color>
+    <color name="text_color05">#333333</color>
+    <color name="text_color06">#FFFFFF</color>
+    <color name="text_color07">#7DFFEEDD</color>
+    <color name="text_color08">#FE3F20</color>
+    <color name="text_color09">#5C5858</color>
+    <color name="text_color11">#C8C8C8</color>
+    <color name="text_color12">#B65E0B</color>
+    <color name="text_color13">#E5E5E5</color>
+    <color name="text_color14">#FF3600</color>
+    <color name="text_color15">#666666</color>
+    <color name="text_color16">#FF0000</color>
+    <!--透明度40%-->
+    <color name="text_color17">#66E5E5E5</color>
+    <color name="text_color19">#CCCCCC</color>
+    <color name="text_color20">#00000000</color>
+    <!--50%-->
+    <color name="text_color21">#7DE5E5E5</color>
+    <!--60%-->
+    <color name="text_color24">#96333333</color>
+    <color name="text_color27">#AAAAAA</color>
+    <color name="text_color28">#F8F8F8</color>
+    <color name="text_color29">#E7E7E7</color>
+    <color name="text_color30">#838383</color>
+    <color name="text_color32">#EEEEEE</color>
+    <color name="text_color33">#FF531E</color>
+    <color name="text_color34">#CE22DE</color>
+    <color name="text_color35">#FF6B19</color>
+    <!--白色20%透明度-->
+    <color name="text_color36">#33FFFFFF</color>
+
+    <color name="text_color37">#FFD800</color>
+    <color name="text_color38">#F44C27</color>
+    <color name="text_color39">#F6F6F6</color>
+    <color name="text_color40">#A3A1A1</color>
+    <color name="text_color41">#DCDCDC</color>
+    <color name="text_color42">#E5FFEBD8</color>
+    <color name="text_color44">#CC3037</color>
+    <color name="text_color45">#FFF583</color>
+    <color name="text_color46">#B0131A</color>
+    <color name="text_color47">#FD6B72</color>
+    <color name="text_color48">#99000000</color>
+    <color name="text_color49">#F60000</color>
+    <!--白色40%透明度-->
+    <color name="text_color50">#66FFFFFF</color>
+    <color name="text_color51">#F32337</color>
+    <color name="text_color52">#20D5D3</color>
+    <color name="text_color53">#FECC04</color>
+    <!--白色30%透明度-->
+    <color name="text_color54">#4CFFFFFF</color>
+    <color name="text_color55">#048AAA</color>
+    <color name="text_color56">#F4F4F4</color>
+    <color name="text_color57">#9DCCF2</color>
 </resources>

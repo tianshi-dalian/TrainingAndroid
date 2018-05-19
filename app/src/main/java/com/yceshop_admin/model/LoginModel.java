@@ -19,8 +19,8 @@ import static com.yceshop_admin.common.SystemApplication.retrofit;
  * 登录Model
  * LoginModel
  *
- * @author tianshi
- * @time 2018/5/14
+ * @author gehang
+ * @time 2018/5/18
  */
 
 public class LoginModel implements ILoginModel {
@@ -35,8 +35,8 @@ public class LoginModel implements ILoginModel {
     @Override
     public void login(String userName, String passWord, OnWsdlListener onWsdlListener) {
         LoginBean loginBean = new LoginBean();
-        loginBean.setUcode(userName);
-        loginBean.setUserPw(passWord);
+        loginBean.setUserName(userName);
+        loginBean.setUserPass(passWord);
         //调用数据库
         LoginWsdl loginWsdl = retrofit.create(LoginWsdl.class);
         Call<LoginBean> call = loginWsdl.getData(loginBean);

@@ -1,29 +1,32 @@
 package com.yceshop_admin.bean;
 
 import com.yceshop_admin.common.CommonBean;
-import com.yceshop_admin.entity.LoginEntity;
+import com.yceshop_admin.entity.RegisterEntity;
 
 /**
- * 登录bean
- * LoginBean
+ * 注册的javabean
+ * RegisterBean
  *
  * @author gehang
  * @time 2018/5/18/018
  */
-
-public class LoginBean extends CommonBean {
+public class RegisterBean extends CommonBean {
     /**
-     * 手机号
+     * 用户名
      */
     private String userName;
+
     /**
-     * 用户密码
+     *验证码
+     *
+     */
+    private  String codeName;
+
+    /**
+     *
+     *用户密码
      */
     private String userPass;
-    /**
-     * 身份区分（m：会员，d：经销商）
-     */
-    private String userType = "d";
 
     public String getUserName() {
         return userName;
@@ -31,6 +34,14 @@ public class LoginBean extends CommonBean {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getCodeName() {
+        return codeName;
+    }
+
+    public void setCodeName(String codeName) {
+        this.codeName = codeName;
     }
 
     public String getUserPass() {
@@ -41,26 +52,14 @@ public class LoginBean extends CommonBean {
         this.userPass = userPass;
     }
 
-    public String getUserType() {
-        return userType;
-    }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
+    private RegisterEntity  data;
 
-    public LoginEntity getData() {
+    public RegisterEntity getData() {
         return data;
     }
 
-    public void setData(LoginEntity data) {
+    public void setData(RegisterEntity data) {
         this.data = data;
     }
-
-    /**
-     * 后台返回结果
-     */
-    private LoginEntity data;
-
-
 }

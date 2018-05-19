@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@mipmap/bg_member_login_logo">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@mipmap/ic_member_logo" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_25dp"
+            android:paddingRight="@dimen/size_25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="21.5dp"
+                android:layout_marginBottom="3.5dp"
+                android:layout_marginTop="42dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_22dp"
+                    android:layout_height="@dimen/size_22dp"
+                    android:background="@mipmap/ic_zhanghao" />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25.1dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/text_0183"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color05"
+                    android:textColorHint="@color/text_color11"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <ImageView
+                    android:id="@+id/shanchu_t"
+                    android:layout_width="@dimen/size_17dp"
+                    android:layout_height="@dimen/size_17dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/btn_shanchu"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/text_color05"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_25dp"
+            android:paddingRight="@dimen/size_25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_marginBottom="3.5dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_22dp"
+                    android:layout_height="@dimen/size_22dp"
+                    android:background="@mipmap/ic_mima" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25.1dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/text_0185"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color05"
+                    android:textColorHint="@color/text_color11"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <ImageView
+                    android:id="@+id/shanchu_p"
+                    android:layout_width="@dimen/size_17dp"
+                    android:layout_height="@dimen/size_17dp"
+                    android:layout_marginRight="@dimen/size_11dp"
+                    android:background="@mipmap/btn_shanchu"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/eye01"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/eye"
+                        android:layout_width="19.5dp"
+                        android:layout_height="11.5dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@mipmap/btn_yanjing_n" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_12dp"
+                android:background="@color/text_color05"></View>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="41dp"
+            android:layout_marginRight="24.5dp"
+            android:clickable="true"
+            android:text="@string/text_0186"
+            android:textColor="@color/text_color05"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_25dp"
+            android:paddingRight="@dimen/size_25dp">
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_20dp"
+                android:background="@drawable/btn_member_login"
+
+                android:text="@string/text_denglu"
+                android:textColor="@color/text_color06"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_jing_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/text_0187"
+                    android:textColor="@color/text_color03"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <TextView
+                    android:id="@+id/tv_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/text_0188"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/text_size_14sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_0189"
+                    android:textColor="@color/text_color05"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <TextView
+                    android:id="@+id/tv_Internet01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/text_0190"
+                    android:textColor="@color/text_color03"
+                    android:textSize="@dimen/text_size_14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/title_rl_01"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <LinearLayout
+            android:id="@+id/ll_titleReturn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="reTurn">
+
+            <ImageView
+                android:layout_width="8.5dp"
+                android:layout_height="13.5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:background="@mipmap/btn_fanhui" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:text="@string/text_0248"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_color06"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

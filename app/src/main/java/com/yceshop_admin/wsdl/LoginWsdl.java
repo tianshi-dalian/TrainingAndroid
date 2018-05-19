@@ -10,11 +10,11 @@ import retrofit2.http.POST;
  * 登录部分接口
  * LoginWsdl
  *
- * @author tianshi
- * @time 2018/5/15
+ * @author gehang
+ * @time 2018/5/18
  */
 
 public interface LoginWsdl {
-    @POST("api0201001/login")
+    @POST("login/LoginUser")
     Call<LoginBean> getData(@Body LoginBean loginBean);
 }

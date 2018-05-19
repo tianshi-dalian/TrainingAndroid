@@ -12,8 +12,8 @@ import org.apache.commons.lang3.StringUtils;
  * 登录Presenter
  * LoginPresenter
  *
- * @author tianshi
- * @time 2018/5/14
+ * @author gehang
+ * @time 2018/5/18/018
  */
 public class LoginPresenter implements ILoginPresenter {
 
@@ -40,7 +40,8 @@ public class LoginPresenter implements ILoginPresenter {
         loginModel.login(iLoginView.getUserName(), iLoginView.getPassword(), new OnWsdlListener<LoginBean>() {
             @Override
             public void onSuccess(LoginBean loginBean) {
-                iLoginView.showToastShort("用户名：" + loginBean.getData().getNickName());
+                iLoginView.showToastShort("用户名：" + loginBean.getData().getUserName());
+
             }
 
             @Override
