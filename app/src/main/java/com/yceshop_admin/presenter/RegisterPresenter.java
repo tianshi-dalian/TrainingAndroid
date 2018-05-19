@@ -44,7 +44,7 @@ public class RegisterPresenter implements IRegisterPresenter {
             @Override
             public void onSuccess(RegisterBean registerBean) {
                 iRegisterView.showToastShort("用户名：" + registerBean.getData().getUserName());
-                
+                iRegisterView.goLogin();
 
             }
 

@@ -33,6 +33,9 @@ public interface ILoginView extends ICommonView {
      */
     void login(LoginBean loginBean);
 
-
+    /**
+     * 登录成功跳转到主页
+     * */
+    void goIndex();
 
 }

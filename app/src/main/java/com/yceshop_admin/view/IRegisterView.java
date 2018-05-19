@@ -29,7 +29,11 @@ public interface IRegisterView  extends ICommonView {
      * #return 密码
      * */
     String getuserPass();
-
+    /**
+     * 注册成功跳转到登录页
+     * @return 用户名
+     * */
+    void goLogin();
 
 
 }

@@ -206,6 +206,8 @@
     <string name="text_0248">会员登录</string>
     <string name="text_0249">会员注册</string>
     <string name="text_0250">添加商品</string>
+    <string name="text_0251">标题</string>
+    <string name="text_0252">价格（￥）</string>
 
 
 </resources>
