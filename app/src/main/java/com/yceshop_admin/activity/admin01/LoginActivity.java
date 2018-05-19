@@ -27,6 +27,7 @@ public class LoginActivity extends CommonActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
     }
 
     /**
