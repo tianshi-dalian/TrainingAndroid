@@ -1,5 +1,6 @@
 package com.yceshop_admin.activity.admin01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,6 +40,8 @@ public class GoodsDetailActivity extends CommonActivity implements IGoodsInforma
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods_detail);
         ButterKnife.bind(this);
+        Intent getIntent = getIntent();
+
         initData();
     }
 

@@ -27,13 +27,17 @@ public class GoodsListModel implements IGoodsListModel {
      */
     @Override
     public void goodsList(OnWsdlListener onWsdlListener) {
+        //初始化
         GoodsWsdl goodsWsdl = retrofit.create(GoodsWsdl.class);
+        //建立最外层的数据bean（虽然这个接口后台不需要任何数据）
         GoodsBean goodsBean = new GoodsBean();
         Call<GoodsBean> call = goodsWsdl.goodsList(goodsBean);
+        //这才是开始调接口（异步）
         call.enqueue(new Callback<GoodsBean>() {
             @Override
             public void onResponse(Call<GoodsBean> call, Response<GoodsBean> response) {
                 if (response.isSuccessful()) {
+                    //取到后台的返回的数据（储蓄罐里已经装满钱了）
                     GoodsBean goodsBean1 = response.body();
                     if (Constant.INT_1000 == goodsBean1.getCode()) {
                         //请求成功了，并且正确返回数据了

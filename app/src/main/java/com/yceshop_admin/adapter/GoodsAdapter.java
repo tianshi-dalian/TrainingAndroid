@@ -20,13 +20,16 @@ import java.util.List;
  */
 public class GoodsAdapter extends BaseQuickAdapter<GoodsEntity,BaseViewHolder> {
 
+
     private Activity activity;
     public GoodsAdapter(List<GoodsEntity> list,Activity activity){
         super(R.layout.item_goods_list,list);
         this.activity = activity;
     }
+
     @Override
     protected void convert(BaseViewHolder helper, GoodsEntity item) {
+
         /**
          * 商品名字
          */
@@ -49,9 +52,11 @@ public class GoodsAdapter extends BaseQuickAdapter<GoodsEntity,BaseViewHolder> {
          * */
 //        GlideUtils.showImage(activity,item.getGoodfsPic(),helper.getView(R.id.commodity_pic));
 //        Glide.with(mContext).load(item.getGoodfsPic()).crossFade().into((ImageView) helper.getView(R.id.commodity_pic));
+
         GlideUtils.showImage(activity,item.getGoofsPic(),helper.getView(R.id.commodity_pic));
         helper.addOnClickListener(R.id.commodity_pic);
 
 
     }
+
 }

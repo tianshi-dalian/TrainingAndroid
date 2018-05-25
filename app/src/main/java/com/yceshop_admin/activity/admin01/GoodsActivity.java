@@ -1,14 +1,20 @@
 package com.yceshop_admin.activity.admin01;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yceshop_admin.R;
 import com.yceshop_admin.adapter.GoodsAdapter;
 import com.yceshop_admin.common.CommonActivity;
 import com.yceshop_admin.entity.GoodsEntity;
+import com.yceshop_admin.entity.GoodsInformactionEntity;
 import com.yceshop_admin.presenter.GoodsPresenter;
 import com.yceshop_admin.view.IGoodsListView;
 
@@ -24,10 +30,11 @@ import butterknife.ButterKnife;
  * @author qinhp
  * @time 2018/5/19
  */
-public class GoodsActivity extends CommonActivity implements IGoodsListView{
+public class GoodsActivity extends CommonActivity implements IGoodsListView {
 
     @BindView(R.id.list_recyclerView)
     RecyclerView listRecyclerView;
+    private int goodsId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +52,7 @@ public class GoodsActivity extends CommonActivity implements IGoodsListView{
 
     @Override
     public void initData() {
-        GoodsPresenter goodsPresenter= new GoodsPresenter(this);
+        GoodsPresenter goodsPresenter = new GoodsPresenter(this);
         goodsPresenter.goodsList();
     }
 
@@ -57,15 +64,27 @@ public class GoodsActivity extends CommonActivity implements IGoodsListView{
     @Override
     public void loadAdapter(List<GoodsEntity> list) {
         listRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        GoodsAdapter goodsAdapter = new GoodsAdapter(list,this);
+        GoodsAdapter goodsAdapter = new GoodsAdapter(list, this);
         listRecyclerView.setAdapter(goodsAdapter);
         /**
          * 跳转到详情页
          */
+
+        goodsAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+        goodsAdapter.isFirstOnly(false);
+
+        goodsAdapter.setOnItemChildClickListener((adapter, view, position) -> {
+            Toast.makeText(this, "查看商品"+position, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(GoodsActivity.this, GoodsDetailActivity.class);
+            intent.putExtra("goodsId",goodsId);
+            startActivityForResult(intent, 1);
+        });
         goodsAdapter.setOnItemClickListener((adapter, view, position) -> {
-            Intent intent = new Intent(GoodsActivity.this,GoodsDetailActivity.class);
-//                intent.putExtra("goodsId", GoodsBean);
-            startActivityForResult(intent,1);
+            Toast.makeText(this, "查看商品"+position, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(GoodsActivity.this, GoodsDetailActivity.class);
+//            intent.putExtra("goodsId",goodsId);
+            intent.putExtra("goodsId",goodsId);
+            startActivityForResult(intent, 1);
         });
     }
 }
