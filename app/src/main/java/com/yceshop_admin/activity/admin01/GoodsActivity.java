@@ -2,15 +2,11 @@ package com.yceshop_admin.activity.admin01;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yceshop_admin.R;
 import com.yceshop_admin.adapter.GoodsAdapter;
-import com.yceshop_admin.bean.GoodsBean;
 import com.yceshop_admin.common.CommonActivity;
 import com.yceshop_admin.entity.GoodsEntity;
 import com.yceshop_admin.presenter.GoodsPresenter;

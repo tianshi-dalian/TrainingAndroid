@@ -28,30 +28,31 @@ public class GoodsListModel implements IGoodsListModel {
     @Override
     public void goodsList(OnWsdlListener onWsdlListener) {
         GoodsWsdl goodsWsdl = retrofit.create(GoodsWsdl.class);
-        GoodsBean goodsBean=new GoodsBean();
-        Call<GoodsBean> call=goodsWsdl.goodsList(goodsBean);
+        GoodsBean goodsBean = new GoodsBean();
+        Call<GoodsBean> call = goodsWsdl.goodsList(goodsBean);
         call.enqueue(new Callback<GoodsBean>() {
             @Override
             public void onResponse(Call<GoodsBean> call, Response<GoodsBean> response) {
-                if (response.isSuccessful()){
-                    GoodsBean goodsBean1=response.body();
-                    if (Constant.INT_1000==goodsBean1.getCode()){
+                if (response.isSuccessful()) {
+                    GoodsBean goodsBean1 = response.body();
+                    if (Constant.INT_1000 == goodsBean1.getCode()) {
                         //请求成功了，并且正确返回数据了
                         onWsdlListener.onSuccess(goodsBean1);
-                    }else{
+                    } else {
                         //请求成功了，但没有正确返回数据（有可能后台处理到了异常，例如请求参数不正确）
                         onWsdlListener.onError(goodsBean1.getMessage());
-                    GoodsBean goodsBean=response.body();
-                    if (Constant.INT_1000==goodsBean.getCode()){
-                        //请求成功了，并且正确返回数据了
-                        onWsdlListener.onSuccess(goodsBean);
-                    }else{
-                        //请求成功了，但没有正确返回数据（有可能后台处理到了异常，例如请求参数不正确）
-                        onWsdlListener.onError(goodsBean.getMessage());
+                        GoodsBean goodsBean = response.body();
+                        if (Constant.INT_1000 == goodsBean.getCode()) {
+                            //请求成功了，并且正确返回数据了
+                            onWsdlListener.onSuccess(goodsBean);
+                        } else {
+                            //请求成功了，但没有正确返回数据（有可能后台处理到了异常，例如请求参数不正确）
+                            onWsdlListener.onError(goodsBean.getMessage());
+                        }
+
+
                     }
-
-
-                }else{
+                } else {
                     //请求成功了，但是后台崩溃了（后台有问题，需要找后台调试）
                     onWsdlListener.onError("网络连接失败，请检查网络");
                 }
