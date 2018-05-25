@@ -11,7 +11,7 @@ import com.yceshop_admin.view.IGoodsListView;
  * 注册的Presenter
  * RegisterPresenter
  *
- * @author gehang
+ * @author qinhp
  * @time 2018/5/18/018
  */
 public class GoodsPresenter implements IGoodsPresenter {
