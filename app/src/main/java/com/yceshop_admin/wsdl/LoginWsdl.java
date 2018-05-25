@@ -15,6 +15,6 @@ import retrofit2.http.POST;
  */
 
 public interface LoginWsdl {
-    @POST("login/LoginUser")
+    @POST("login/loginUser")
     Call<LoginBean> getData(@Body LoginBean loginBean);
 }

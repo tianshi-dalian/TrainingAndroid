@@ -16,7 +16,7 @@ import retrofit2.http.POST;
 public interface RegisterWsdl {
 
 
-    @POST("add/AddUser")
+    @POST("add/addUser")
     Call<RegisterBean> getData(@Body RegisterBean registerBean);
 
 }
