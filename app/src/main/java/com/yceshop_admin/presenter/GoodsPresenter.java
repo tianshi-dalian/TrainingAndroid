@@ -13,12 +13,17 @@ import com.yceshop_admin.view.IGoodsListView;
 import com.yceshop_admin.view.IRegisterView;
 
 import org.apache.commons.lang3.StringUtils;
+import com.yceshop_admin.model.GoodsInformationModel;
+import com.yceshop_admin.model.GoodsListModel;
+import com.yceshop_admin.model.listenter.OnWsdlListener;
+import com.yceshop_admin.presenter.impl.IGoodsPresenter;
+import com.yceshop_admin.view.IGoodsListView;
 
 /**
  * 注册的Presenter
  * RegisterPresenter
  *
- * @author gehang
+ * @author qinhp
  * @time 2018/5/18/018
  */
 public class GoodsPresenter implements IGoodsPresenter {
@@ -31,15 +36,13 @@ public class GoodsPresenter implements IGoodsPresenter {
     @Override
     public void goodsList() {
         //调用model层（业务逻辑层）
-        GoodsListModel goodsListModel=new GoodsListModel();
+        GoodsListModel goodsListModel =new GoodsListModel();
         goodsListModel.goodsList(new OnWsdlListener<GoodsBean>() {
             @Override
             public void onSuccess(GoodsBean bean) {
                 //成功了。我现在操作view
                 //1.给adapter赋值
                 iGoodsListView.loadAdapter(bean.getData());
-
-
 
             }
 

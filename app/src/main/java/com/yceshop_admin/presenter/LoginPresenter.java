@@ -1,5 +1,8 @@
 package com.yceshop_admin.presenter;
 
+import android.content.Intent;
+
+import com.yceshop_admin.activity.admin01.RegisterActivity;
 import com.yceshop_admin.bean.LoginBean;
 import com.yceshop_admin.model.LoginModel;
 import com.yceshop_admin.model.listenter.OnWsdlListener;
@@ -40,8 +43,8 @@ public class LoginPresenter implements ILoginPresenter {
         loginModel.login(iLoginView.getUserName(), iLoginView.getPassword(), new OnWsdlListener<LoginBean>() {
             @Override
             public void onSuccess(LoginBean loginBean) {
-                iLoginView.showToastShort("用户名：" + loginBean.getData().getUserName());
-
+                //iLoginView.showToastShort("用户名：" + loginBean.getData().getUserName());
+                iLoginView.goIndex();
             }
 
             @Override

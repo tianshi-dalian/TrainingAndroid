@@ -41,6 +41,13 @@ public class GoodsListModel implements IGoodsListModel {
                     }else{
                         //请求成功了，但没有正确返回数据（有可能后台处理到了异常，例如请求参数不正确）
                         onWsdlListener.onError(goodsBean1.getMessage());
+                    GoodsBean goodsBean=response.body();
+                    if (Constant.INT_1000==goodsBean.getCode()){
+                        //请求成功了，并且正确返回数据了
+                        onWsdlListener.onSuccess(goodsBean);
+                    }else{
+                        //请求成功了，但没有正确返回数据（有可能后台处理到了异常，例如请求参数不正确）
+                        onWsdlListener.onError(goodsBean.getMessage());
                     }
 
 

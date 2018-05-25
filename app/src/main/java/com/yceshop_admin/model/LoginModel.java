@@ -37,6 +37,9 @@ public class LoginModel implements ILoginModel {
         LoginBean loginBean = new LoginBean();
         loginBean.setUserName(userName);
         loginBean.setUserPass(passWord);
+
+
+
         //调用数据库
         LoginWsdl loginWsdl = retrofit.create(LoginWsdl.class);
         Call<LoginBean> call = loginWsdl.getData(loginBean);

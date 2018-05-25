@@ -1,7 +1,7 @@
 package com.yceshop_admin.presenter;
 
 import com.yceshop_admin.bean.GoodsInformationBean;
-import com.yceshop_admin.model.GoodsInformactionModel;
+import com.yceshop_admin.model.GoodsInformationModel;
 import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.presenter.impl.IGoodsInformationPresenter;
 import com.yceshop_admin.view.IGoodsInformationView;
@@ -10,7 +10,7 @@ import com.yceshop_admin.view.IGoodsInformationView;
  * 注册的Presenter
  * RegisterPresenter
  *
- * @author gehang
+ * @author qinhp
  * @time 2018/5/18/018
  */
 public class GoodsInformationPresenter implements IGoodsInformationPresenter {
@@ -23,8 +23,8 @@ public class GoodsInformationPresenter implements IGoodsInformationPresenter {
     @Override
     public void goodsInformation() {
         //调用model层（业务逻辑层）
-        GoodsInformactionModel goodsInformactionModel=new GoodsInformactionModel();
-        goodsInformactionModel.goodsInformation(new OnWsdlListener<GoodsInformationBean>() {
+        GoodsInformationModel goodsInformationModel =new GoodsInformationModel();
+        goodsInformationModel.goodsInformation(new OnWsdlListener<GoodsInformationBean>() {
             @Override
             public void onSuccess(GoodsInformationBean bean) {
                 //成功了。我现在操作view
