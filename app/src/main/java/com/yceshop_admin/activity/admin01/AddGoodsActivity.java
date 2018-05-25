@@ -1,6 +1,7 @@
 package com.yceshop_admin.activity.admin01;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;

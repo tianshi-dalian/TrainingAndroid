@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"><!--首页搜索框样式-->
+    <!--弧度-->
+    <corners android:radius="4dp"></corners>
+    <!--填充色-->
+    <solid android:color="@android:color/transparent"></solid>
+    <!--边框-->
+    <stroke
+        android:width="2px"
+        android:color="@color/text_color14"></stroke>
+</shape>

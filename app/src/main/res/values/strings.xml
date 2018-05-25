@@ -1,4 +1,10 @@
 <resources>
+
+    <string name="yceshop_list">商品列表</string>
+    <string name="yceshop_shopName">中盈自营</string>
+    <string name="yceshop_address">辽宁大连</string>
+
+    <!--<string name="wsdl_error">网络加载失败，请确认连接网络</string>-->
     <string name="app_name">考核</string>
     <string name="text_zonghe">综合</string>
     <string name="text_xiaoliang">销量</string>
@@ -206,6 +212,10 @@
     <string name="text_0248">会员登录</string>
     <string name="text_0249">会员注册</string>
     <string name="text_0250">添加商品</string>
+    <string name="text_0251">酒类直供 52度五粮液500ml 普五浓香型高度白酒</string>
+    <string name="text_0252">一直信赖盈橙E品，东西收到，很满意！！真的是超级好的卖家，解答疑问速度非常快，而且不厌其烦，细致认真。关键东西是正品，而且发货速度超快！值得信赖，下次还来！！！</string>
+    <string name="text_0253">2016-06-06</string>
+    <string name="text_0254">规格. 五年陈酿</string>
     <string name="text_0251">标题</string>
     <string name="text_0252">价格（￥）</string>
 

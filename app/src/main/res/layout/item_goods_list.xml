@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--商品线性显示item样式-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/text_color06"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+    <!--商品图片部分-->
+
+        <ImageView
+            android:id="@+id/commodity_pic"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Unichi 玫瑰果精华胶囊60粒 澳洲直邮"
+            android:textColor="@color/text_color05"
+            android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/size_26dp"
+                android:background="@drawable/discount"
+                android:id="@+id/discount_commodity"
+                android:layout_width="41dp"
+                android:layout_height="16dp"
+                android:gravity="center_horizontal"
+                android:text="7.5折"
+                android:textColor="@color/text_color08"
+                android:textSize="11sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_01"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp">
+            <!--金钱标志-->
+            <TextView
+                android:id="@+id/tv_02"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="3dp"
+                android:gravity="bottom"
+                android:includeFontPadding="false"
+                android:text="159.00"
+                android:textColor="@color/text_color08"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+       <RelativeLayout
+                android:id="@+id/rl_originalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp">
+
+                <TextView
+                    android:id="@+id/tv_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="bottom"
+                    android:text="169.00"
+                    android:textColor="@color/text_color09"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@id/tv_03"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@id/tv_03"
+                    android:layout_marginBottom="7.5dp"
+                    android:background="@color/text_color01"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/pic_dainpu" />
+
+            <TextView
+                android:id="@+id/tv_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/yceshop_shopName"
+                android:textColor="@color/text_color01"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tv_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:text="@string/yceshop_address"
+                android:textColor="@color/text_color01"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

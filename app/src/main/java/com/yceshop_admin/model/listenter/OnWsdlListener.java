@@ -1,7 +1,7 @@
 package com.yceshop_admin.model.listenter;
 
 /**
- * 登录监听
+ * 监听
  * OnWsdlListener
  *
  * @author tianshi
@@ -12,9 +12,9 @@ public interface OnWsdlListener<T> {
     /**
      * 成功
      *
-     * @param loginBean 返回结果
+     * @param bean 返回结果
      */
-    void onSuccess(T loginBean);
+    void onSuccess(T bean);
 
     /**
      * 失败
