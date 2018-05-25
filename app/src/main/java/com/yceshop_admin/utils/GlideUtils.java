@@ -23,7 +23,7 @@ public class GlideUtils {
      * @param imageUrl
      * @param imageView
      */
-    public void showImage(Activity activity, String imageUrl, ImageView imageView) {
+    public static void showImage(Activity activity, String imageUrl, ImageView imageView) {
         try {
             Glide.with(activity)
                     .load(imageUrl)
@@ -45,7 +45,7 @@ public class GlideUtils {
      * @param resourceId
      * @param imageView
      */
-    public void showImage(Activity activity, Integer resourceId, ImageView imageView) {
+    public static void showImage(Activity activity, Integer resourceId, ImageView imageView) {
         try {
             Glide.with(activity)
                     .load(resourceId)
