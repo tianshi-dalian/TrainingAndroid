@@ -1,5 +1,6 @@
 package com.yceshop_admin.activity.admin01;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Path;
 import android.os.Bundle;
@@ -87,17 +88,21 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
 /**
  * 所有按钮的点击事件
  * */
+    @SuppressLint("ResourceAsColor")
     @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.iv_addphoto, R.id.iv_delete, R.id.btn_submit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_01:
                 getLabelReak();
+                btn01.setBackgroundColor(R.color.text_color16);
                 break;
             case R.id.btn_02:
                 getLableQrcode();
+                btn02.setBackgroundColor(R.color.text_color16);
                 break;
             case R.id.btn_03:
                 getLableQrefund();
+                btn03.setBackgroundColor(R.color.text_color16);
                 break;
             case R.id.iv_addphoto:
                 ivAddphoto.setImageResource(R.mipmap.pic_01);
