@@ -14,17 +14,18 @@ public interface IRegisterModel {
     /**
      * 注册Model
      *
-     * @param userName      账号
-     * @param codeName      验证码
-     * @param userPass      密码
+     * @param userName       账号
+     * @param codeName       验证码
+     * @param userPass       密码
      * @param onWsdlListener 结果监听
      */
     void reg(String userName, String codeName, String userPass, OnWsdlListener onWsdlListener);
 
     /**
      * 获取验证码Model
+     *
      * @param userName
      * @param onWsdlListener
      */
-    void getIdentifyCode(String userName,OnWsdlListener onWsdlListener);
+    void getIdentifyCode(String userName, OnWsdlListener onWsdlListener);
 }

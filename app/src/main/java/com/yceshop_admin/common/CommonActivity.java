@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.text.InputType;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.yceshop_admin.utils.ToastUtil;
@@ -55,4 +56,5 @@ public abstract class  CommonActivity extends FragmentActivity implements ICommo
             editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
         }
     }
+
 }

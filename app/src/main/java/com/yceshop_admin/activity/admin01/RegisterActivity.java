@@ -143,12 +143,10 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
 
         }
     };
-        /**
-         * 密码输入框删除按钮的监听事件
-         *
-         *
-         * */
-    TextWatcher etPasswordTextWatcher= new TextWatcher() {
+    /**
+     * 密码输入框删除按钮的监听事件
+     */
+    TextWatcher etPasswordTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -173,11 +171,9 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
         }
     };
     /**
-     *
      * 推荐码删除按钮的点击监听事件
-     *
-     * */
-    TextWatcher etRecommendTextWatcher=new TextWatcher() {
+     */
+    TextWatcher etRecommendTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -201,6 +197,7 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
 
         }
     };
+
     /**
      * 页面的点击事件汇总
      */
@@ -244,7 +241,7 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
              * */
             case R.id.bt_reg:
 
-               registerPresenter = new RegisterPresenter(this);
+                registerPresenter = new RegisterPresenter(this);
                 registerPresenter.reg();
                 break;
         }

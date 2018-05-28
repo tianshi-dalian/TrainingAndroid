@@ -1,4 +1,5 @@
 package com.yceshop_admin.entity;
+
 /**
  * 验证码的databean
  * IdentifyCodeEntity
@@ -18,7 +19,7 @@ public class IdentifyCodeEntity {
 
     /**
      * 验证码
-     * */
+     */
 
-    private  String codeName;
+    private String codeName;
 }

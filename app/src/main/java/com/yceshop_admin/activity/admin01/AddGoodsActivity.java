@@ -25,6 +25,7 @@ import com.yceshop_admin.view.IAddGoodsView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 /**
  * 添加商品
  * AddGoodsActivity
@@ -65,6 +66,10 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
 
     public static final String Path = "http://image.fvideo.cn/uploadfile/2014/07/06/20140706151135878002.jpg";
 
+    /**
+     * 是否显示密码
+     */
+    private boolean ispw = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,15 +90,17 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
     public void initData() {
 
     }
-/**
- * 所有按钮的点击事件
- * */
+
+    /**
+     * 所有按钮的点击事件
+     */
     @SuppressLint("ResourceAsColor")
     @OnClick({R.id.btn_01, R.id.btn_02, R.id.btn_03, R.id.iv_addphoto, R.id.iv_delete, R.id.btn_submit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_01:
-                getLabelReak();
+
+
                 btn01.setBackgroundColor(R.color.text_color16);
                 break;
             case R.id.btn_02:
@@ -137,8 +144,8 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
 
     @Override
     public Double getGoodsSalePrice() {
-     Double goodRebatePric=getGoodsPrice() * (getGoodsSale() / 10);
-     goodRebatePrice.setText(String.valueOf(goodRebatePric));
+        Double goodRebatePric = getGoodsPrice() * (getGoodsSale() / 10);
+        goodRebatePrice.setText(String.valueOf(goodRebatePric));
         return Double.valueOf(goodRebatePrice.getText().toString().trim());
 
     }
@@ -171,9 +178,10 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
     public String getLableQrefund() {
         return "支持七天退货";
     }
-/**
- * 添加商品成功后跳转到商品列表
- * */
+
+    /**
+     * 添加商品成功后跳转到商品列表
+     */
     @Override
     public void goGoodList() {
         Intent intent = new Intent(this, GoodsActivity.class);
@@ -181,9 +189,10 @@ public class AddGoodsActivity extends CommonActivity implements IAddGoodsView {
         finish();
 
     }
-/**折扣输入框监听事件
- *
- */
+
+    /**
+     * 折扣输入框监听事件
+     */
     TextWatcher goodRebateTextWatcher = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {

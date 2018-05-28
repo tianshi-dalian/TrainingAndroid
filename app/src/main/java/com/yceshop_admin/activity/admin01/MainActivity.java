@@ -17,7 +17,8 @@ import butterknife.ButterKnife;
  * @time 2018/5/18/018
  */
 public class MainActivity extends CommonActivity {
-int userId;
+    int userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ int userId;
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        intent.getIntExtra("userId",userId);
+        intent.getIntExtra("userId", userId);
     }
 
     @Override
@@ -35,7 +36,6 @@ int userId;
 
     @Override
     public void initData() {
-
 
 
     }
