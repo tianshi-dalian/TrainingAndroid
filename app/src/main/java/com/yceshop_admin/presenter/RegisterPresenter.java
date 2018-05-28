@@ -1,12 +1,11 @@
 package com.yceshop_admin.presenter;
 
+import com.yceshop_admin.bean.IdentifyCodeBean;
 import com.yceshop_admin.bean.RegisterBean;
 import com.yceshop_admin.model.RegisterModel;
-import com.yceshop_admin.model.listenter.OnRegListener;
+import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.presenter.impl.IRegisterPresenter;
 import com.yceshop_admin.view.IRegisterView;
-
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * 注册的Presenter
@@ -27,35 +26,39 @@ public class RegisterPresenter implements IRegisterPresenter {
      */
     @Override
     public void reg() {
-        if (StringUtils.isEmpty(iRegisterView.getUserName())) {
-            iRegisterView.showToastShort("账号不能为空");
-            return;
-        } else if (StringUtils.isEmpty(iRegisterView.getcodeName())) {
-            iRegisterView.showToastShort("验证码不能为空");
-            return;
-        }else if (StringUtils.isEmpty(iRegisterView.getuserPass())){
 
-            iRegisterView.showToastShort("密码不能为空");
-            return;
-        }
         //调用注册接口
         RegisterModel registerModel = new RegisterModel();
-        registerModel.reg(iRegisterView.getUserName(), iRegisterView.getcodeName(),iRegisterView.getuserPass(), new OnRegListener<RegisterBean>() {
+        registerModel.reg(iRegisterView.getUserName(), iRegisterView.getcodeName(),iRegisterView.getuserPass(), new OnWsdlListener<RegisterBean>() {
+
+
             @Override
-            public void onSuccess(RegisterBean registerBean) {
-                iRegisterView.showToastShort("用户名：" + registerBean.getData().getUserName());
+            public void onSuccess(RegisterBean bean) {
                 iRegisterView.goLogin();
-
             }
-
-
 
             @Override
             public void onError(String msg) {
-                iRegisterView.showToastShort(msg);
+
             }
-
-
         });
     }
+
+    @Override
+    public void getIdentifyCode() {
+        //调用获取验证码借口
+        RegisterModel registerModel = new RegisterModel();
+        registerModel.getIdentifyCode(iRegisterView.getUserName(), new OnWsdlListener<IdentifyCodeBean>() {
+
+            @Override
+            public void onSuccess(IdentifyCodeBean bean) {
+               iRegisterView.showToastShort("验证码"+bean.getData().getCodeName());
+            }
+
+            @Override
+            public void onError(String msg) {
+
+            }
+        });
     }
+}

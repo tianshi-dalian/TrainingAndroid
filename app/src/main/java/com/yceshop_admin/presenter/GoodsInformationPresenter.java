@@ -33,7 +33,7 @@ public class GoodsInformationPresenter implements IGoodsInformationPresenter {
             @Override
             public void onSuccess(GoodsInformationBean bean) {
                 //成功了。我现在操作view
-                //1.给adapter赋值
+                //tu.给adapter赋值
                 //给轮播图赋值
                 iGoodsInformationView.loadBanner(bean.getData().getGoofsPic());
                 //给商品名称赋值

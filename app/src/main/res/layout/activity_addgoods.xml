@@ -48,7 +48,6 @@
                     android:background="@drawable/bg_borner"
                     android:ems="10"
                     android:hint="请输入商品名称"
-                    android:inputType="textPersonName"
                     android:textColorHint="#cccccc"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -81,7 +80,7 @@
                     android:background="@drawable/bg_borner"
                     android:ems="10"
                     android:hint="请输入商品价格"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColorHint="#cccccc"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -113,8 +112,9 @@
                     android:layout_weight="0.8"
                     android:background="@drawable/bg_borner"
                     android:ems="10"
+                    android:maxLength="1"
                     android:hint="请输入商品折扣"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColorHint="#cccccc"
                     android:textSize="16sp" />
             </LinearLayout>
@@ -144,10 +144,11 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/size_10dp"
                     android:layout_weight="0.8"
+                    android:saveEnabled="false"
                     android:background="@drawable/bg_borner"
                     android:ems="10"
                     android:hint="￥0（系统自动折算）"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textColorHint="#cccccc"
                     android:textSize="16sp" />
             </LinearLayout>

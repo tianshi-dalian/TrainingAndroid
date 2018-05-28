@@ -1,6 +1,7 @@
 package com.yceshop_admin.model.impl;
 
-import com.yceshop_admin.model.listenter.OnRegListener;
+
+import com.yceshop_admin.model.listenter.OnWsdlListener;
 
 /**
  * 注册Model
@@ -16,7 +17,14 @@ public interface IRegisterModel {
      * @param userName      账号
      * @param codeName      验证码
      * @param userPass      密码
-     * @param onRegListener 结果监听
+     * @param onWsdlListener 结果监听
      */
-    void reg(String userName, String codeName, String userPass, OnRegListener onRegListener);
+    void reg(String userName, String codeName, String userPass, OnWsdlListener onWsdlListener);
+
+    /**
+     * 获取验证码Model
+     * @param userName
+     * @param onWsdlListener
+     */
+    void getIdentifyCode(String userName,OnWsdlListener onWsdlListener);
 }

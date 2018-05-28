@@ -12,4 +12,6 @@ public interface IRegisterPresenter {
      * 注册
      */
     void reg();
+
+    void getIdentifyCode();
 }

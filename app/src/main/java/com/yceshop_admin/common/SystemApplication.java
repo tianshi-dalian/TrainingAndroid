@@ -33,7 +33,7 @@ public class SystemApplication extends Application {
                 connectTimeout(15, TimeUnit.SECONDS).
                 readTimeout(15, TimeUnit.SECONDS).
                 writeTimeout(15, TimeUnit.SECONDS).build();
-        //1.创建Retrofit对象
+        //tu.创建Retrofit对象
         retrofit = new Retrofit.Builder()
                 .client(client)
                 .addConverterFactory(FastJsonConverterFactory.create())//解析方法

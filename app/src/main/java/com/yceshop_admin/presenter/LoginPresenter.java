@@ -31,13 +31,7 @@ public class LoginPresenter implements ILoginPresenter {
      */
     @Override
     public void login() {
-        if (StringUtils.isEmpty(iLoginView.getUserName())) {
-            iLoginView.showToastShort("账号不能为空");
-            return;
-        } else if (StringUtils.isEmpty(iLoginView.getPassword())) {
-            iLoginView.showToastShort("密码不能为空");
-            return;
-        }
+
         //调用登录接口
         LoginModel loginModel = new LoginModel();
         loginModel.login(iLoginView.getUserName(), iLoginView.getPassword(), new OnWsdlListener<LoginBean>() {

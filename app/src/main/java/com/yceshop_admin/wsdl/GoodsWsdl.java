@@ -1,5 +1,6 @@
 package com.yceshop_admin.wsdl;
 
+import com.yceshop_admin.bean.AddGoodsBean;
 import com.yceshop_admin.bean.GoodsBean;
 
 import retrofit2.Call;
@@ -21,4 +22,9 @@ public interface GoodsWsdl {
      */
     @POST("goods/goodsList")
     Call<GoodsBean> goodsList(@Body GoodsBean goodsBean);
+
+
+    @POST("goods/addGoods")
+    Call<AddGoodsBean> addGoods(@Body AddGoodsBean addGoodsBean);
+
 }

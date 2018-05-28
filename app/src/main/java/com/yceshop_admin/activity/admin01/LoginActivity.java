@@ -204,7 +204,7 @@ public class LoginActivity extends CommonActivity implements ILoginView {
      */
     @Override
     public void goIndex() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, GoodsActivity.class);
         intent.putExtra("userId", 0);
         startActivity(intent);
     }

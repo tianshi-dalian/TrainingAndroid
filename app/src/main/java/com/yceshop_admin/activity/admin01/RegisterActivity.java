@@ -223,7 +223,8 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
              * 获取验证码按钮点击事件
              * */
             case R.id.tv_identifycode:
-
+                RegisterPresenter registerPresenter = new RegisterPresenter(this);
+                registerPresenter.getIdentifyCode();
 
                 break;
             /**
@@ -243,7 +244,7 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
              * */
             case R.id.bt_reg:
 
-                RegisterPresenter registerPresenter = new RegisterPresenter(this);
+               registerPresenter = new RegisterPresenter(this);
                 registerPresenter.reg();
                 break;
         }
@@ -270,4 +271,6 @@ public class RegisterActivity extends CommonActivity implements IRegisterView {
         intent.putExtra("UserName", etPhone.getText().toString().trim());
         startActivity(intent);
     }
+
+
 }

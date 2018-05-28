@@ -1,5 +1,6 @@
 package com.yceshop_admin.wsdl;
 
+import com.yceshop_admin.bean.IdentifyCodeBean;
 import com.yceshop_admin.bean.RegisterBean;
 
 import retrofit2.Call;
@@ -18,5 +19,8 @@ public interface RegisterWsdl {
 
     @POST("add/addUser")
     Call<RegisterBean> getData(@Body RegisterBean registerBean);
+
+    @POST("code/createCode")
+    Call<IdentifyCodeBean> getIdentifyCode(@Body IdentifyCodeBean IdentifyCodeBean);
 
 }

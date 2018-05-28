@@ -36,4 +36,8 @@ public interface IRegisterView  extends ICommonView {
     void goLogin();
 
 
+
+
+
+
 }

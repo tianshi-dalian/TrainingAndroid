@@ -71,4 +71,42 @@ public class GoodsEntity {
     public void setGoodsSaleprice(double goodsSaleprice) {
         this.goodsSaleprice = goodsSaleprice;
     }
+
+/**
+ *
+ * GoodsEntity
+ *添加三个标签
+ * @author gehang
+ * @time 2018/5/25/025
+ */
+
+    private String labelReak;
+    private String lableQrcode;
+
+    public String getLableQrefund() {
+        return lableQrefund;
+    }
+
+    public void setLableQrefund(String lableQrefund) {
+        this.lableQrefund = lableQrefund;
+    }
+
+    private  String lableQrefund;
+    public String getLabelReak() {
+        return labelReak;
+    }
+
+    public void setLabelReak(String labelReak) {
+        this.labelReak = labelReak;
+    }
+
+    public String getLableQrcode() {
+        return lableQrcode;
+    }
+
+    public void setLableQrcode(String lableQrcode) {
+        this.lableQrcode = lableQrcode;
+    }
+
+
 }

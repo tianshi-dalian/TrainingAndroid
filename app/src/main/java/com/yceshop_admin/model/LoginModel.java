@@ -8,6 +8,8 @@ import com.yceshop_admin.model.impl.ILoginModel;
 import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.wsdl.LoginWsdl;
 
+import org.apache.commons.lang3.StringUtils;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,6 +36,13 @@ public class LoginModel implements ILoginModel {
      */
     @Override
     public void login(String userName, String passWord, OnWsdlListener onWsdlListener) {
+        if (StringUtils.isEmpty(userName)) {
+           onWsdlListener.onError("账号不能为空");
+            return;
+        } else if (StringUtils.isEmpty(passWord)) {
+          onWsdlListener.onError("密码不能为空");
+            return;
+        }
         LoginBean loginBean = new LoginBean();
         loginBean.setUserName(userName);
         loginBean.setUserPass(passWord);
