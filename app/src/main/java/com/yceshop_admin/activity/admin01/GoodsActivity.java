@@ -70,21 +70,20 @@ public class GoodsActivity extends CommonActivity implements IGoodsListView {
          * 跳转到详情页
          */
 
-        goodsAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+        goodsAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
         goodsAdapter.isFirstOnly(false);
 
-        goodsAdapter.setOnItemChildClickListener((adapter, view, position) -> {
-            Toast.makeText(this, "查看商品"+position, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(GoodsActivity.this, GoodsDetailActivity.class);
-            intent.putExtra("goodsId",goodsId);
-            startActivityForResult(intent, 1);
-        });
+//        goodsAdapter.setOnItemChildClickListener((adapter, view, position) -> {
+//            Toast.makeText(this, "查看商品" + position, Toast.LENGTH_SHORT).show();
+//            Intent intent = new Intent(GoodsActivity.this, GoodsDetailActivity.class);
+//            intent.putExtra("goodsId", ((GoodsEntity) adapter.getItem(position)).getGoodId());
+//            startActivity(intent);
+//        });
         goodsAdapter.setOnItemClickListener((adapter, view, position) -> {
-            Toast.makeText(this, "查看商品"+position, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "查看商品" + position, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(GoodsActivity.this, GoodsDetailActivity.class);
-//            intent.putExtra("goodsId",goodsId);
-            intent.putExtra("goodsId",goodsId);
-            startActivityForResult(intent, 1);
+            intent.putExtra("goodsId", ((GoodsEntity) adapter.getItem(position)).getGoodId());
+            startActivity(intent);
         });
     }
 }

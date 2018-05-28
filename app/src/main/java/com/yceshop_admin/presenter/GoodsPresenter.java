@@ -1,19 +1,6 @@
 package com.yceshop_admin.presenter;
 
 import com.yceshop_admin.bean.GoodsBean;
-import com.yceshop_admin.bean.RegisterBean;
-import com.yceshop_admin.model.GoodsInformactionModel;
-import com.yceshop_admin.model.GoodsListModel;
-import com.yceshop_admin.model.RegisterModel;
-import com.yceshop_admin.model.listenter.OnRegListener;
-import com.yceshop_admin.model.listenter.OnWsdlListener;
-import com.yceshop_admin.presenter.impl.IGoodsPresenter;
-import com.yceshop_admin.presenter.impl.IRegisterPresenter;
-import com.yceshop_admin.view.IGoodsListView;
-import com.yceshop_admin.view.IRegisterView;
-
-import org.apache.commons.lang3.StringUtils;
-import com.yceshop_admin.model.GoodsInformationModel;
 import com.yceshop_admin.model.GoodsListModel;
 import com.yceshop_admin.model.listenter.OnWsdlListener;
 import com.yceshop_admin.presenter.impl.IGoodsPresenter;

@@ -1,7 +1,7 @@
 package com.yceshop_admin.presenter.impl;
 
 /**
- * 获取商品列表
+ * 获取商品详情
  * IGoodsPresenter
  *
  * @author qinhp
@@ -9,8 +9,9 @@ package com.yceshop_admin.presenter.impl;
  */
 public interface IGoodsInformationPresenter {
     /**
-     * 获取商品列表
+     * 获取商品详情
+     * @param  goodsId
      */
-    void goodsInformation();
+    void goodsInformation(int goodsId);
 
 }

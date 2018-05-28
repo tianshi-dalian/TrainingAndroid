@@ -54,8 +54,7 @@ public class GoodsAdapter extends BaseQuickAdapter<GoodsEntity,BaseViewHolder> {
 //        Glide.with(mContext).load(item.getGoodfsPic()).crossFade().into((ImageView) helper.getView(R.id.commodity_pic));
 
         GlideUtils.showImage(activity,item.getGoofsPic(),helper.getView(R.id.commodity_pic));
-        helper.addOnClickListener(R.id.commodity_pic);
-
+//        helper.addOnClickListener(R.id.commodity_pic);
 
     }
 

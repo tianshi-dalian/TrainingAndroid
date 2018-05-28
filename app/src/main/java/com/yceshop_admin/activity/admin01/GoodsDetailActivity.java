@@ -35,13 +35,15 @@ public class GoodsDetailActivity extends CommonActivity implements IGoodsInforma
     @BindView(R.id.tv_goodsSale)
     TextView tvGoodsSale;
 
+    int extra_goodsId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods_detail);
         ButterKnife.bind(this);
-        Intent getIntent = getIntent();
-
+        Intent intent = getIntent();
+        extra_goodsId = intent.getIntExtra("goodsId", 0);
         initData();
     }
 
@@ -50,7 +52,6 @@ public class GoodsDetailActivity extends CommonActivity implements IGoodsInforma
      */
     @Override
     public void initView() {
-
     }
 
     /**
@@ -59,7 +60,7 @@ public class GoodsDetailActivity extends CommonActivity implements IGoodsInforma
     @Override
     public void initData() {
         GoodsInformationPresenter goodsInformationPresenter = new GoodsInformationPresenter(this);
-        goodsInformationPresenter.goodsInformation();
+        goodsInformationPresenter.goodsInformation(extra_goodsId);
     }
 
     /**

@@ -16,7 +16,7 @@ import retrofit2.http.POST;
  */
 public interface GoodsInformationWsdl {
     /**
-     * 获取商品列表
+     * 获取商品详情
      * @param goodsInformationBean 传入参数
      * @return 传出参数
      */

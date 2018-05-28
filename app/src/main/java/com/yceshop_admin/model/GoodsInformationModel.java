@@ -24,14 +24,16 @@ import static com.yceshop_admin.common.SystemApplication.retrofit;
  */
 public class GoodsInformationModel implements IGoodsInformactionModel {
     /**
-     * 商品详情Model
+     * 商品详情model
      *
+     * @param goodsId        商品Id
      * @param onWsdlListener 结果监听
      */
     @Override
-    public void goodsInformation(OnWsdlListener onWsdlListener) {
+    public void goodsInformation(int goodsId, OnWsdlListener onWsdlListener) {
         GoodsInformationWsdl goodsInformationWsdl = retrofit.create(GoodsInformationWsdl.class);
         GoodsInformationBean goodsInformationBean=new GoodsInformationBean();
+        goodsInformationBean.setGoodId(goodsId);
         Call<GoodsInformationBean> call=goodsInformationWsdl.goodsInformation(goodsInformationBean);
         call.enqueue(new Callback<GoodsInformationBean>() {
             @Override

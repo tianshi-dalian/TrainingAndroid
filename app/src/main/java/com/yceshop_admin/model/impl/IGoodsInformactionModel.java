@@ -12,7 +12,8 @@ import com.yceshop_admin.model.listenter.OnWsdlListener;
 public interface IGoodsInformactionModel {
     /**
      * 商品详情model
+     * @param goodsId 商品Id
      *  @param onWsdlListener 结果监听
      */
-    void goodsInformation(OnWsdlListener onWsdlListener);
+    void goodsInformation(int goodsId,OnWsdlListener onWsdlListener);
 }
